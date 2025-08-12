@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Наушники Sony WH-1000XM5",
+    "url": "https://example.com/sony-wh1000xm5",
+    "image": "https://images.unsplash.com/photo-1518441902112-f0b2cf87fbf9?q=80&w=1200&auto=format&fit=crop",
+    "price": "≈ 350 $",
+    "status": "wanted",
+    "tags": [
+      "аудио",
+      "шумоподавление"
+    ],
+    "notes": "Лучше брать в чёрном. Проверить совместимость с ноутбуком."
+  },
+  {
+    "title": "Kindle Paperwhite 11",
+    "url": "https://example.com/kindle",
+    "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200&auto=format&fit=crop",
+    "price": "≈ 160 $",
+    "status": "ordered",
+    "tags": [
+      "чтение",
+      "подарок"
+    ],
+    "notes": "Чехол тёмно-серый. Взять без рекламы."
+  },
+  {
+    "title": "Трековые кроссовки Salomon",
+    "url": "https://example.com/salomon",
+    "image": "",
+    "price": "≈ 180 $",
+    "status": "received",
+    "tags": [
+      "спорт",
+      "туризм"
+    ],
+    "notes": "Размер 42 2/3. Цвет — чёрный."
+  }
+]
