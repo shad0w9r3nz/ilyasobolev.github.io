@@ -1,4 +1,4 @@
-/* Основные настройки и сброс */
+/* Сброс и базовые стили */
 
 * {
   box-sizing: border-box;
@@ -54,7 +54,8 @@ main {
 }
 
 .category-btn:hover,
-.category-btn:focus {
+.category-btn:focus,
+.category-btn[aria-selected="true"] {
   background-color: #444444;
   outline: none;
 }

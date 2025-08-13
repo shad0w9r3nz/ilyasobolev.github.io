@@ -3,26 +3,27 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Сайт-визитка подарков</title>
+<title>Мой вишлист подарков</title>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main>
-    <section class="categories">
-      <button class="category-btn" data-category="До&nbsp;5&nbsp;000&nbsp;₽" type="button">До&nbsp;5&nbsp;000&nbsp;₽</button>
-      <button class="category-btn" data-category="5&nbsp;000–10&nbsp;000&nbsp;₽" type="button">5&nbsp;000–10&nbsp;000&nbsp;₽</button>
-      <button class="category-btn" data-category="От&nbsp;10&nbsp;000&nbsp;₽" type="button">От&nbsp;10&nbsp;000&nbsp;₽</button>
+    <section class="categories" role="tablist" aria-label="Категории подарков">
+      <button class="category-btn" data-category="До&nbsp;5&nbsp;000&nbsp;₽" type="button" role="tab" aria-selected="false" tabindex="0">До&nbsp;5&nbsp;000&nbsp;₽</button>
+      <button class="category-btn" data-category="5&nbsp;000–10&nbsp;000&nbsp;₽" type="button" role="tab" aria-selected="false" tabindex="-1">5&nbsp;000–10&nbsp;000&nbsp;₽</button>
+      <button class="category-btn" data-category="От&nbsp;10&nbsp;000&nbsp;₽" type="button" role="tab" aria-selected="false" tabindex="-1">От&nbsp;10&nbsp;000&nbsp;₽</button>
     </section>
 
-    <section class="gifts-container" aria-live="polite"></section>
+    <section class="gifts-container" aria-live="polite" aria-label="Список подарков"></section>
   </main>
 
 <script>
   async function fetchWishlist() {
     const res = await fetch('wishlist.json');
-    return res.ok ? await res.json() : {};
+    if (!res.ok) return {};
+    return res.json();
   }
 
   function clearGifts() {
@@ -49,7 +50,7 @@
     desc.textContent = gift.description;
     card.appendChild(desc);
 
-    if(gift.link) {
+    if (gift.link) {
       const link = document.createElement('a');
       link.href = gift.link;
       link.target = '_blank';
@@ -75,12 +76,20 @@
     return str.replace(/&nbsp;/g, ' ');
   }
 
+  function updateAriaSelected(buttons, current) {
+    buttons.forEach(btn => {
+      btn.setAttribute('aria-selected', btn === current ? 'true' : 'false');
+      btn.tabIndex = btn === current ? 0 : -1;
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', async () => {
     const wishlist = await fetchWishlist();
-
     const buttons = document.querySelectorAll('.category-btn');
+
     buttons.forEach(button => {
       button.addEventListener('click', () => {
+        updateAriaSelected(buttons, button);
         const catKey = normalizeCategoryKey(button.dataset.category);
         if (wishlist[catKey]) {
           displayGifts(wishlist[catKey]);
@@ -89,6 +98,11 @@
         }
       });
     });
+
+    // Покажем сразу первую категорию
+    if (buttons.length > 0) {
+      buttons[0].click();
+    }
   });
 </script>
 </body>
