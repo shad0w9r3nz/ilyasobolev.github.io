@@ -1,62 +1,62 @@
 {
-    "to5000": [
+    "to-5000": [
         {
-            "title": "Ежедневник в кожаном переплете",
-            "description": "Стильный ежедневник для планирования задач",
-            "image": "https://via.placeholder.com/300x200?text=Ежедневник",
-            "link": "https://example.com/product1"
-        },
-        {
-            "title": "Термокружка с подогревом",
-            "description": "Поддерживает напиток горячим весь день",
-            "image": "https://via.placeholder.com/300x200?text=Термокружка",
-            "link": "https://example.com/product2"
-        },
-        {
-            "title": "LED лампа для рабочего стола",
-            "description": "Яркое и регулируемое освещение",
-            "image": "https://via.placeholder.com/300x200?text=LED+лампа",
-            "link": "https://example.com/product3"
-        }
-    ],
-    "5000to10000": [
-        {
-            "title": "Беспроводные наушники",
+            "name": "Беспроводные наушники",
             "description": "Чистый звук и шумоподавление",
             "image": "https://via.placeholder.com/300x200?text=Наушники",
-            "link": "https://example.com/product4"
+            "link": "https://example.com"
         },
         {
-            "title": "Умная колонка",
+            "name": "Умная колонка",
             "description": "Голосовой помощник и музыка в одном",
-            "image": "https://via.placeholder.com/300x200?text=Умная+колонка",
-            "link": "https://example.com/product5"
+            "image": "https://via.placeholder.com/300x200?text=Колонка",
+            "link": "https://example.com"
         },
         {
-            "title": "Мини-проектор",
+            "name": "Мини-проектор",
             "description": "Компактный проектор для фильмов",
             "image": "https://via.placeholder.com/300x200?text=Проектор",
-            "link": "https://example.com/product6"
+            "link": "https://example.com"
         }
     ],
-    "from10000": [
+    "5000-10000": [
         {
-            "title": "Игровая консоль",
-            "description": "Для настоящих геймеров",
+            "name": "Фитнес-часы",
+            "description": "Отслеживание активности и сна",
+            "image": "https://via.placeholder.com/300x200?text=Часы",
+            "link": "https://example.com"
+        },
+        {
+            "name": "Кофемашина",
+            "description": "Ароматный кофе каждое утро",
+            "image": "https://via.placeholder.com/300x200?text=Кофемашина",
+            "link": "https://example.com"
+        },
+        {
+            "name": "Клавиатура механическая",
+            "description": "Подсветка и тактильные переключатели",
+            "image": "https://via.placeholder.com/300x200?text=Клавиатура",
+            "link": "https://example.com"
+        }
+    ],
+    "from-10000": [
+        {
+            "name": "Игровая консоль",
+            "description": "Погружение в мир игр",
             "image": "https://via.placeholder.com/300x200?text=Консоль",
-            "link": "https://example.com/product7"
+            "link": "https://example.com"
         },
         {
-            "title": "Смарт-часы",
-            "description": "Отслеживание активности и уведомления",
-            "image": "https://via.placeholder.com/300x200?text=Смарт-часы",
-            "link": "https://example.com/product8"
+            "name": "Ноутбук",
+            "description": "Мощный и портативный",
+            "image": "https://via.placeholder.com/300x200?text=Ноутбук",
+            "link": "https://example.com"
         },
         {
-            "title": "Электросамокат",
-            "description": "Удобный транспорт для города",
-            "image": "https://via.placeholder.com/300x200?text=Электросамокат",
-            "link": "https://example.com/product9"
+            "name": "Электросамокат",
+            "description": "Быстро и удобно по городу",
+            "image": "https://via.placeholder.com/300x200?text=Самокат",
+            "link": "https://example.com"
         }
     ]
 }
