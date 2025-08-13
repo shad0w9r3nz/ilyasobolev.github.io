@@ -1,17 +1,32 @@
-[
-  {
-    "title": "Игровая клавиатура",
-    "image": "https://via.placeholder.com/400x250?text=Keyboard",
-    "link": "https://example.com"
-  },
-  {
-    "title": "Беспроводные наушники",
-    "image": "https://via.placeholder.com/400x250?text=Headphones",
-    "link": "https://example.com"
-  },
-  {
-    "title": "Смарт-часы",
-    "image": "https://via.placeholder.com/400x250?text=Smartwatch",
-    "link": "https://example.com"
-  }
-]
+{
+    "under5k": [
+        {
+            "name": "Книга по D&D",
+            "description": "Красочное издание для вдохновения в кампаниях",
+            "image": "https://example.com/dndbook.jpg",
+            "link": "https://example.com/dndbook"
+        },
+        {
+            "name": "Термокружка",
+            "description": "Металлическая, держит тепло 8 часов",
+            "image": "https://example.com/mug.jpg",
+            "link": "https://example.com/mug"
+        }
+    ],
+    "5k10k": [
+        {
+            "name": "Наушники",
+            "description": "Беспроводные, с шумоподавлением",
+            "image": "https://example.com/headphones.jpg",
+            "link": "https://example.com/headphones"
+        }
+    ],
+    "over10k": [
+        {
+            "name": "Игровое кресло",
+            "description": "Эргономичное, с поддержкой спины",
+            "image": "https://example.com/chair.jpg",
+            "link": "https://example.com/chair"
+        }
+    ]
+}
