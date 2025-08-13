@@ -22,7 +22,7 @@
 <script>
   async function fetchWishlist() {
     const res = await fetch('wishlist.json');
-    return res.ok ? await res.json() : [];
+    return res.ok ? await res.json() : {};
   }
 
   function clearGifts() {
@@ -65,14 +65,13 @@
     const container = document.querySelector('.gifts-container');
     clearGifts();
 
-    gifts.forEach(gift => {
+    gifts.slice(0,3).forEach(gift => {
       const card = createGiftCard(gift);
       container.appendChild(card);
     });
   }
 
   function normalizeCategoryKey(str) {
-    // Убираем неразрывные пробелы для совпадения с ключами из JSON
     return str.replace(/&nbsp;/g, ' ');
   }
 
@@ -83,8 +82,11 @@
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         const catKey = normalizeCategoryKey(button.dataset.category);
-        const filtered = wishlist.filter(g => g.category === catKey).slice(0,3);
-        displayGifts(filtered);
+        if (wishlist[catKey]) {
+          displayGifts(wishlist[catKey]);
+        } else {
+          clearGifts();
+        }
       });
     });
   });
