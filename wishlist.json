@@ -1,62 +1,62 @@
 {
-    "до5000": [
+    "До 5 000 ₽": [
         {
-            "name": "Беспроводные наушники",
-            "description": "Чистый звук и шумоподавление",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "name": "Чашка с логотипом",
+            "description": "Керамическая кружка с серебристым узором",
+            "image": "https://via.placeholder.com/300x200.png?text=Чашка",
+            "link": "https://example.com/cup"
         },
         {
-            "name": "Фитнес-браслет",
-            "description": "Отслеживание активности и сна",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "name": "Блокнот",
+            "description": "Стильный черный блокнот с тиснением",
+            "image": "https://via.placeholder.com/300x200.png?text=Блокнот",
+            "link": "https://example.com/notebook"
         },
         {
-            "name": "Настольная лампа",
-            "description": "Современный дизайн и мягкий свет",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "name": "Флешка",
+            "description": "Металлическая флешка на 64 ГБ",
+            "image": "https://via.placeholder.com/300x200.png?text=Флешка",
+            "link": "https://example.com/usb"
         }
     ],
-    "5000-10000": [
+    "5 000–10 000 ₽": [
         {
-            "name": "Умная колонка",
-            "description": "Голосовой помощник и музыка в одном",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "name": "Наушники",
+            "description": "Беспроводные наушники с шумоподавлением",
+            "image": "https://via.placeholder.com/300x200.png?text=Наушники",
+            "link": "https://example.com/headphones"
         },
         {
-            "name": "Мини-проектор",
-            "description": "Компактный проектор для фильмов",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "name": "Смарт-лампа",
+            "description": "Умная лампа с управлением через приложение",
+            "image": "https://via.placeholder.com/300x200.png?text=Лампа",
+            "link": "https://example.com/lamp"
         },
         {
-            "name": "Планшет",
-            "description": "Лёгкий и удобный для работы и отдыха",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "name": "Клавиатура",
+            "description": "Механическая клавиатура с подсветкой",
+            "image": "https://via.placeholder.com/300x200.png?text=Клавиатура",
+            "link": "https://example.com/keyboard"
         }
     ],
-    "от10000": [
-        {
-            "name": "Игровая консоль",
-            "description": "Новые игры и развлечения",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
-        },
+    "От 10 000 ₽": [
         {
             "name": "Смартфон",
-            "description": "Мощный и современный",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "description": "Мощный смартфон последнего поколения",
+            "image": "https://via.placeholder.com/300x200.png?text=Смартфон",
+            "link": "https://example.com/smartphone"
         },
         {
             "name": "Ноутбук",
-            "description": "Подходит для работы и игр",
-            "image": "https://via.placeholder.com/250x150",
-            "link": "https://example.com"
+            "description": "Легкий ноутбук с большим экраном",
+            "image": "https://via.placeholder.com/300x200.png?text=Ноутбук",
+            "link": "https://example.com/laptop"
+        },
+        {
+            "name": "Игровая приставка",
+            "description": "Консоль нового поколения",
+            "image": "https://via.placeholder.com/300x200.png?text=Приставка",
+            "link": "https://example.com/console"
         }
     ]
 }
