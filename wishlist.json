@@ -3,30 +3,60 @@
         {
             "name": "Книга по D&D",
             "description": "Красочное издание для вдохновения в кампаниях",
-            "image": "https://example.com/dndbook.jpg",
+            "image": "https://picsum.photos/id/1015/400/300",
             "link": "https://example.com/dndbook"
         },
         {
             "name": "Термокружка",
             "description": "Металлическая, держит тепло 8 часов",
-            "image": "https://example.com/mug.jpg",
+            "image": "https://picsum.photos/id/1025/400/300",
             "link": "https://example.com/mug"
+        },
+        {
+            "name": "Игровая мышь",
+            "description": "RGB-подсветка, высокая точность",
+            "image": "https://picsum.photos/id/1027/400/300",
+            "link": "https://example.com/mouse"
         }
     ],
     "5k10k": [
         {
             "name": "Наушники",
             "description": "Беспроводные, с шумоподавлением",
-            "image": "https://example.com/headphones.jpg",
+            "image": "https://picsum.photos/id/1035/400/300",
             "link": "https://example.com/headphones"
+        },
+        {
+            "name": "Умная колонка",
+            "description": "С голосовым помощником",
+            "image": "https://picsum.photos/id/1043/400/300",
+            "link": "https://example.com/speaker"
+        },
+        {
+            "name": "Микрофон",
+            "description": "Для стримов и подкастов",
+            "image": "https://picsum.photos/id/1050/400/300",
+            "link": "https://example.com/mic"
         }
     ],
     "over10k": [
         {
             "name": "Игровое кресло",
             "description": "Эргономичное, с поддержкой спины",
-            "image": "https://example.com/chair.jpg",
+            "image": "https://picsum.photos/id/1062/400/300",
             "link": "https://example.com/chair"
+        },
+        {
+            "name": "Монитор 27\"",
+            "description": "144Hz, QHD",
+            "image": "https://picsum.photos/id/1074/400/300",
+            "link": "https://example.com/monitor"
+        },
+        {
+            "name": "Видеокарта",
+            "description": "Мощная для игр и рендера",
+            "image": "https://picsum.photos/id/1084/400/300",
+            "link": "https://example.com/gpu"
         }
     ]
 }
