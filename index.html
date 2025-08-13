@@ -20,15 +20,72 @@
   </main>
 
 <script>
-  async function fetchWishlist() {
-    const res = await fetch('wishlist.json');
-    if (!res.ok) return {};
-    return res.json();
-  }
+  // Данные подарков (замени на свои)
+  const wishlist = {
+    "До 5 000 ₽": [
+      {
+        "name": "Книга 'Современное искусство'",
+        "description": "Уникальное издание с иллюстрациями современных художников.",
+        "image": "https://via.placeholder.com/220x140?text=Книга",
+        "link": "https://example.com/artbook"
+      },
+      {
+        "name": "Настольная игра 'Колонизаторы'",
+        "description": "Весёлая стратегическая игра для компании.",
+        "image": "https://via.placeholder.com/220x140?text=Игра",
+        "link": "https://example.com/boardgame"
+      },
+      {
+        "name": "Термокружка с дизайном",
+        "description": "Держит напитки горячими до 6 часов.",
+        "image": "https://via.placeholder.com/220x140?text=Кружка",
+        "link": "https://example.com/mug"
+      }
+    ],
+    "5 000–10 000 ₽": [
+      {
+        "name": "Беспроводные наушники",
+        "description": "Комфортные и с хорошим звуком для ежедневного использования.",
+        "image": "https://via.placeholder.com/220x140?text=Наушники",
+        "link": "https://example.com/headphones"
+      },
+      {
+        "name": "Портативная колонка",
+        "description": "Яркий звук и стильный дизайн.",
+        "image": "https://via.placeholder.com/220x140?text=Колонка",
+        "link": "https://example.com/speaker"
+      },
+      {
+        "name": "Набор для ухода за кожей",
+        "description": "Натуральные компоненты для ежедневного ухода.",
+        "image": "https://via.placeholder.com/220x140?text=Набор",
+        "link": "https://example.com/skincare"
+      }
+    ],
+    "От 10 000 ₽": [
+      {
+        "name": "Умные часы",
+        "description": "Отслеживайте активность и уведомления прямо на запястье.",
+        "image": "https://via.placeholder.com/220x140?text=Часы",
+        "link": "https://example.com/smartwatch"
+      },
+      {
+        "name": "Планшет для рисования",
+        "description": "Для творчества и цифрового искусства.",
+        "image": "https://via.placeholder.com/220x140?text=Планшет",
+        "link": "https://example.com/tablet"
+      },
+      {
+        "name": "Кофемашина",
+        "description": "Приготовление любимого кофе в один клик.",
+        "image": "https://via.placeholder.com/220x140?text=Кофемашина",
+        "link": "https://example.com/coffeemachine"
+      }
+    ]
+  };
 
   function clearGifts() {
-    const container = document.querySelector('.gifts-container');
-    container.innerHTML = '';
+    document.querySelector('.gifts-container').innerHTML = '';
   }
 
   function createGiftCard(gift) {
@@ -66,7 +123,7 @@
     const container = document.querySelector('.gifts-container');
     clearGifts();
 
-    gifts.slice(0,3).forEach(gift => {
+    gifts.slice(0, 3).forEach(gift => {
       const card = createGiftCard(gift);
       container.appendChild(card);
     });
@@ -83,8 +140,7 @@
     });
   }
 
-  document.addEventListener('DOMContentLoaded', async () => {
-    const wishlist = await fetchWishlist();
+  document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.category-btn');
 
     buttons.forEach(button => {
@@ -99,7 +155,7 @@
       });
     });
 
-    // Покажем сразу первую категорию
+    // Показываем сразу первую категорию
     if (buttons.length > 0) {
       buttons[0].click();
     }
