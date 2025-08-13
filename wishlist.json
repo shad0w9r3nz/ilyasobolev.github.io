@@ -1,61 +1,61 @@
 {
-    "to-5000": [
+    "до5000": [
         {
             "name": "Беспроводные наушники",
             "description": "Чистый звук и шумоподавление",
-            "image": "https://via.placeholder.com/300x200?text=Наушники",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         },
         {
-            "name": "Умная колонка",
-            "description": "Голосовой помощник и музыка в одном",
-            "image": "https://via.placeholder.com/300x200?text=Колонка",
+            "name": "Фитнес-браслет",
+            "description": "Отслеживание активности и сна",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         },
         {
-            "name": "Мини-проектор",
-            "description": "Компактный проектор для фильмов",
-            "image": "https://via.placeholder.com/300x200?text=Проектор",
+            "name": "Настольная лампа",
+            "description": "Современный дизайн и мягкий свет",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         }
     ],
     "5000-10000": [
         {
-            "name": "Фитнес-часы",
-            "description": "Отслеживание активности и сна",
-            "image": "https://via.placeholder.com/300x200?text=Часы",
+            "name": "Умная колонка",
+            "description": "Голосовой помощник и музыка в одном",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         },
         {
-            "name": "Кофемашина",
-            "description": "Ароматный кофе каждое утро",
-            "image": "https://via.placeholder.com/300x200?text=Кофемашина",
+            "name": "Мини-проектор",
+            "description": "Компактный проектор для фильмов",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         },
         {
-            "name": "Клавиатура механическая",
-            "description": "Подсветка и тактильные переключатели",
-            "image": "https://via.placeholder.com/300x200?text=Клавиатура",
+            "name": "Планшет",
+            "description": "Лёгкий и удобный для работы и отдыха",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         }
     ],
-    "from-10000": [
+    "от10000": [
         {
             "name": "Игровая консоль",
-            "description": "Погружение в мир игр",
-            "image": "https://via.placeholder.com/300x200?text=Консоль",
+            "description": "Новые игры и развлечения",
+            "image": "https://via.placeholder.com/250x150",
+            "link": "https://example.com"
+        },
+        {
+            "name": "Смартфон",
+            "description": "Мощный и современный",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         },
         {
             "name": "Ноутбук",
-            "description": "Мощный и портативный",
-            "image": "https://via.placeholder.com/300x200?text=Ноутбук",
-            "link": "https://example.com"
-        },
-        {
-            "name": "Электросамокат",
-            "description": "Быстро и удобно по городу",
-            "image": "https://via.placeholder.com/300x200?text=Самокат",
+            "description": "Подходит для работы и игр",
+            "image": "https://via.placeholder.com/250x150",
             "link": "https://example.com"
         }
     ]

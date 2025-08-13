@@ -1,24 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #111;
-    color: white;
+    font-family: 'WDXL Lubrifont SC', sans-serif;
+    background-color: #000;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    color: silver;
     text-align: center;
-    background-image: radial-gradient(rgba(192,192,192,0.2) 1px, transparent 1px),
-                      radial-gradient(rgba(192,192,192,0.15) 1px, transparent 1px);
-    background-size: 40px 40px, 80px 80px;
-    background-position: 0 0, 20px 20px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-top: 20px;
+.container {
+    padding: 20px;
 }
 
-header p {
-    font-size: 1.1rem;
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: silver;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
     color: #ccc;
-    margin-bottom: 30px;
 }
 
 .categories {
@@ -29,71 +32,73 @@ header p {
     margin-bottom: 20px;
 }
 
-.categories button {
-    background: linear-gradient(145deg, #333, #555);
-    border: none;
-    border-radius: 12px;
-    padding: 20px 25px;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    font-weight: bold;
-    color: white;
+.category-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid silver;
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: silver;
     cursor: pointer;
-    min-width: 110px;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.2s, background 0.3s;
+    flex: 1 0 auto;
+    max-width: 200px;
 }
 
-.categories button:hover {
-    background: linear-gradient(145deg, #555, #777);
+.category-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
 }
 
-.gift-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.products {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 0 20px 40px;
+    justify-content: center;
 }
 
-.gift-item {
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
+.product-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid silver;
     border-radius: 15px;
-    transition: transform 0.3s ease;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
-.gift-item:hover {
-    transform: scale(1.03);
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
-.gift-item img {
+.product-card img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.gift-item h3 {
+.product-card h3 {
+    font-family: 'WDXL Lubrifont SC', sans-serif;
     font-size: 1.2rem;
-    margin: 10px 0 5px;
+    margin-bottom: 5px;
 }
 
-.gift-item p {
-    font-size: 0.95rem;
+.product-card p {
+    font-size: 0.9rem;
     color: #ccc;
 }
 
-/* Анимация появления */
-.animate {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeInUp 0.6s ease forwards;
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-in-out;
 }
 
 @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
     to {
         opacity: 1;
         transform: translateY(0);
