@@ -1,62 +1,53 @@
 {
-    "under5k": [
+    "low": [
         {
-            "name": "Книга по D&D",
-            "description": "Красочное издание для вдохновения в кампаниях",
-            "image": "https://picsum.photos/id/1015/400/300",
-            "link": "https://example.com/dndbook"
+            "title": "Кружка с прикольным дизайном",
+            "image": "https://picsum.photos/300/200?random=1",
+            "link": "https://example.com"
         },
         {
-            "name": "Термокружка",
-            "description": "Металлическая, держит тепло 8 часов",
-            "image": "https://picsum.photos/id/1025/400/300",
-            "link": "https://example.com/mug"
+            "title": "Блокнот в кожаной обложке",
+            "image": "https://picsum.photos/300/200?random=2",
+            "link": "https://example.com"
         },
         {
-            "name": "Игровая мышь",
-            "description": "RGB-подсветка, высокая точность",
-            "image": "https://picsum.photos/id/1027/400/300",
-            "link": "https://example.com/mouse"
+            "title": "Стильная ручка",
+            "image": "https://picsum.photos/300/200?random=3",
+            "link": "https://example.com"
         }
     ],
-    "5k10k": [
+    "mid": [
         {
-            "name": "Наушники",
-            "description": "Беспроводные, с шумоподавлением",
-            "image": "https://picsum.photos/id/1035/400/300",
-            "link": "https://example.com/headphones"
+            "title": "Беспроводные наушники",
+            "image": "https://picsum.photos/300/200?random=4",
+            "link": "https://example.com"
         },
         {
-            "name": "Умная колонка",
-            "description": "С голосовым помощником",
-            "image": "https://picsum.photos/id/1043/400/300",
-            "link": "https://example.com/speaker"
+            "title": "Мини-колонка Bluetooth",
+            "image": "https://picsum.photos/300/200?random=5",
+            "link": "https://example.com"
         },
         {
-            "name": "Микрофон",
-            "description": "Для стримов и подкастов",
-            "image": "https://picsum.photos/id/1050/400/300",
-            "link": "https://example.com/mic"
+            "title": "Настольная лампа",
+            "image": "https://picsum.photos/300/200?random=6",
+            "link": "https://example.com"
         }
     ],
-    "over10k": [
+    "high": [
         {
-            "name": "Игровое кресло",
-            "description": "Эргономичное, с поддержкой спины",
-            "image": "https://picsum.photos/id/1062/400/300",
-            "link": "https://example.com/chair"
+            "title": "Смарт-часы",
+            "image": "https://picsum.photos/300/200?random=7",
+            "link": "https://example.com"
         },
         {
-            "name": "Монитор 27\"",
-            "description": "144Hz, QHD",
-            "image": "https://picsum.photos/id/1074/400/300",
-            "link": "https://example.com/monitor"
+            "title": "Планшет",
+            "image": "https://picsum.photos/300/200?random=8",
+            "link": "https://example.com"
         },
         {
-            "name": "Видеокарта",
-            "description": "Мощная для игр и рендера",
-            "image": "https://picsum.photos/id/1084/400/300",
-            "link": "https://example.com/gpu"
+            "title": "Игровая приставка",
+            "image": "https://picsum.photos/300/200?random=9",
+            "link": "https://example.com"
         }
     ]
 }
