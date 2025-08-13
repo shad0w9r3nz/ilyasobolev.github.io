@@ -1,53 +1,62 @@
 {
-    "low": [
+    "to5000": [
         {
-            "title": "Кружка с прикольным дизайном",
-            "image": "https://picsum.photos/300/200?random=1",
-            "link": "https://example.com"
+            "title": "Ежедневник в кожаном переплете",
+            "description": "Стильный ежедневник для планирования задач",
+            "image": "https://via.placeholder.com/300x200?text=Ежедневник",
+            "link": "https://example.com/product1"
         },
         {
-            "title": "Блокнот в кожаной обложке",
-            "image": "https://picsum.photos/300/200?random=2",
-            "link": "https://example.com"
+            "title": "Термокружка с подогревом",
+            "description": "Поддерживает напиток горячим весь день",
+            "image": "https://via.placeholder.com/300x200?text=Термокружка",
+            "link": "https://example.com/product2"
         },
         {
-            "title": "Стильная ручка",
-            "image": "https://picsum.photos/300/200?random=3",
-            "link": "https://example.com"
+            "title": "LED лампа для рабочего стола",
+            "description": "Яркое и регулируемое освещение",
+            "image": "https://via.placeholder.com/300x200?text=LED+лампа",
+            "link": "https://example.com/product3"
         }
     ],
-    "mid": [
+    "5000to10000": [
         {
             "title": "Беспроводные наушники",
-            "image": "https://picsum.photos/300/200?random=4",
-            "link": "https://example.com"
+            "description": "Чистый звук и шумоподавление",
+            "image": "https://via.placeholder.com/300x200?text=Наушники",
+            "link": "https://example.com/product4"
         },
         {
-            "title": "Мини-колонка Bluetooth",
-            "image": "https://picsum.photos/300/200?random=5",
-            "link": "https://example.com"
+            "title": "Умная колонка",
+            "description": "Голосовой помощник и музыка в одном",
+            "image": "https://via.placeholder.com/300x200?text=Умная+колонка",
+            "link": "https://example.com/product5"
         },
         {
-            "title": "Настольная лампа",
-            "image": "https://picsum.photos/300/200?random=6",
-            "link": "https://example.com"
+            "title": "Мини-проектор",
+            "description": "Компактный проектор для фильмов",
+            "image": "https://via.placeholder.com/300x200?text=Проектор",
+            "link": "https://example.com/product6"
         }
     ],
-    "high": [
+    "from10000": [
+        {
+            "title": "Игровая консоль",
+            "description": "Для настоящих геймеров",
+            "image": "https://via.placeholder.com/300x200?text=Консоль",
+            "link": "https://example.com/product7"
+        },
         {
             "title": "Смарт-часы",
-            "image": "https://picsum.photos/300/200?random=7",
-            "link": "https://example.com"
+            "description": "Отслеживание активности и уведомления",
+            "image": "https://via.placeholder.com/300x200?text=Смарт-часы",
+            "link": "https://example.com/product8"
         },
         {
-            "title": "Планшет",
-            "image": "https://picsum.photos/300/200?random=8",
-            "link": "https://example.com"
-        },
-        {
-            "title": "Игровая приставка",
-            "image": "https://picsum.photos/300/200?random=9",
-            "link": "https://example.com"
+            "title": "Электросамокат",
+            "description": "Удобный транспорт для города",
+            "image": "https://via.placeholder.com/300x200?text=Электросамокат",
+            "link": "https://example.com/product9"
         }
     ]
 }
