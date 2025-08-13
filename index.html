@@ -1,54 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вишлист</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Сайт-визитка подарков</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>🎁 Мой Вишлист 🎁</h1>
-        <p>Выбирай подарки по категориям и переходи к магазину</p>
-    </header>
+  <main>
+    <section class="categories">
+      <button class="category-btn" data-category="До&nbsp;5&nbsp;000&nbsp;₽" type="button">До&nbsp;5&nbsp;000&nbsp;₽</button>
+      <button class="category-btn" data-category="5&nbsp;000–10&nbsp;000&nbsp;₽" type="button">5&nbsp;000–10&nbsp;000&nbsp;₽</button>
+      <button class="category-btn" data-category="От&nbsp;10&nbsp;000&nbsp;₽" type="button">От&nbsp;10&nbsp;000&nbsp;₽</button>
+    </section>
 
-    <main>
-        <div class="categories">
-            <button class="category-btn" data-category="До 5 000 ₽">До 5 000 ₽</button>
-            <button class="category-btn" data-category="5 000–10 000 ₽">5 000–10 000 ₽</button>
-            <button class="category-btn" data-category="От 10 000 ₽">От 10 000 ₽</button>
-        </div>
-        <div id="products" class="products"></div>
-    </main>
+    <section class="gifts-container" aria-live="polite"></section>
+  </main>
 
-    <script>
-        async function loadProducts(category) {
-            const response = await fetch('wishlist.json');
-            const data = await response.json();
-            const productsContainer = document.getElementById('products');
-            productsContainer.innerHTML = '';
+<script>
+  async function fetchWishlist() {
+    const res = await fetch('wishlist.json');
+    return res.ok ? await res.json() : [];
+  }
 
-            const products = data[category] || [];
-            products.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'product-card fadeInUp';
-                card.innerHTML = `
-                    <a href="${product.link}" target="_blank">
-                        <img src="${product.image}" alt="${product.name}">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                    </a>
-                `;
-                productsContainer.appendChild(card);
-            });
-        }
+  function clearGifts() {
+    const container = document.querySelector('.gifts-container');
+    container.innerHTML = '';
+  }
 
-        document.querySelectorAll('.category-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                loadProducts(button.dataset.category);
-            });
-        });
-    </script>
+  function createGiftCard(gift) {
+    const card = document.createElement('article');
+    card.className = 'gift-card fadeInUp';
+    card.tabIndex = 0;
+
+    const img = document.createElement('img');
+    img.src = gift.image;
+    img.alt = gift.name;
+    img.loading = 'lazy';
+    card.appendChild(img);
+
+    const name = document.createElement('h3');
+    name.textContent = gift.name;
+    card.appendChild(name);
+
+    const desc = document.createElement('p');
+    desc.textContent = gift.description;
+    card.appendChild(desc);
+
+    if(gift.link) {
+      const link = document.createElement('a');
+      link.href = gift.link;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'Подробнее';
+      card.appendChild(link);
+    }
+
+    return card;
+  }
+
+  function displayGifts(gifts) {
+    const container = document.querySelector('.gifts-container');
+    clearGifts();
+
+    gifts.forEach(gift => {
+      const card = createGiftCard(gift);
+      container.appendChild(card);
+    });
+  }
+
+  function normalizeCategoryKey(str) {
+    // Убираем неразрывные пробелы для совпадения с ключами из JSON
+    return str.replace(/&nbsp;/g, ' ');
+  }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    const wishlist = await fetchWishlist();
+
+    const buttons = document.querySelectorAll('.category-btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const catKey = normalizeCategoryKey(button.dataset.category);
+        const filtered = wishlist.filter(g => g.category === catKey).slice(0,3);
+        displayGifts(filtered);
+      });
+    });
+  });
+</script>
 </body>
 </html>
