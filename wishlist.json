@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Игровая клавиатура",
+    "image": "https://via.placeholder.com/400x250?text=Keyboard",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Беспроводные наушники",
+    "image": "https://via.placeholder.com/400x250?text=Headphones",
+    "link": "https://example.com"
+  },
+  {
+    "title": "Смарт-часы",
+    "image": "https://via.placeholder.com/400x250?text=Smartwatch",
+    "link": "https://example.com"
+  }
+]
