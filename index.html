@@ -3,163 +3,115 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Мой вишлист подарков</title>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+<title>Вишлист</title>
+<link href="style.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <main>
-    <section class="categories" role="tablist" aria-label="Категории подарков">
-      <button class="category-btn" data-category="До&nbsp;5&nbsp;000&nbsp;₽" type="button" role="tab" aria-selected="false" tabindex="0">До&nbsp;5&nbsp;000&nbsp;₽</button>
-      <button class="category-btn" data-category="5&nbsp;000–10&nbsp;000&nbsp;₽" type="button" role="tab" aria-selected="false" tabindex="-1">5&nbsp;000–10&nbsp;000&nbsp;₽</button>
-      <button class="category-btn" data-category="От&nbsp;10&nbsp;000&nbsp;₽" type="button" role="tab" aria-selected="false" tabindex="-1">От&nbsp;10&nbsp;000&nbsp;₽</button>
-    </section>
+<header>
+  <h1>🎁 Мой Вишлист 🎁</h1>
+  <p>Выбирай подарки по категориям и переходи к магазину</p>
+</header>
 
-    <section class="gifts-container" aria-live="polite" aria-label="Список подарков"></section>
-  </main>
+<main>
+  <div class="categories">
+    <button class="category-btn" data-category="До 5 000 ₽">До 5 000 ₽</button>
+    <button class="category-btn" data-category="5 000–10 000 ₽">5 000–10 000 ₽</button>
+    <button class="category-btn" data-category="От 10 000 ₽">От 10 000 ₽</button>
+  </div>
+  <div id="products" class="products"></div>
+</main>
 
 <script>
-  // Данные подарков (замени на свои)
   const wishlist = {
     "До 5 000 ₽": [
       {
-        "name": "Книга 'Современное искусство'",
-        "description": "Уникальное издание с иллюстрациями современных художников.",
-        "image": "https://via.placeholder.com/220x140?text=Книга",
-        "link": "https://example.com/artbook"
+        name: "Чашка с логотипом",
+        description: "Керамическая кружка с серебристым узором",
+        image: "https://via.placeholder.com/300x200.png?text=Чашка",
+        link: "https://example.com/cup"
       },
       {
-        "name": "Настольная игра 'Колонизаторы'",
-        "description": "Весёлая стратегическая игра для компании.",
-        "image": "https://via.placeholder.com/220x140?text=Игра",
-        "link": "https://example.com/boardgame"
+        name: "Блокнот",
+        description: "Стильный черный блокнот с тиснением",
+        image: "https://via.placeholder.com/300x200.png?text=Блокнот",
+        link: "https://example.com/notebook"
       },
       {
-        "name": "Термокружка с дизайном",
-        "description": "Держит напитки горячими до 6 часов.",
-        "image": "https://via.placeholder.com/220x140?text=Кружка",
-        "link": "https://example.com/mug"
+        name: "Флешка",
+        description: "Металлическая флешка на 64 ГБ",
+        image: "https://via.placeholder.com/300x200.png?text=Флешка",
+        link: "https://example.com/usb"
       }
     ],
     "5 000–10 000 ₽": [
       {
-        "name": "Беспроводные наушники",
-        "description": "Комфортные и с хорошим звуком для ежедневного использования.",
-        "image": "https://via.placeholder.com/220x140?text=Наушники",
-        "link": "https://example.com/headphones"
+        name: "Наушники",
+        description: "Беспроводные наушники с шумоподавлением",
+        image: "https://via.placeholder.com/300x200.png?text=Наушники",
+        link: "https://example.com/headphones"
       },
       {
-        "name": "Портативная колонка",
-        "description": "Яркий звук и стильный дизайн.",
-        "image": "https://via.placeholder.com/220x140?text=Колонка",
-        "link": "https://example.com/speaker"
+        name: "Смарт-лампа",
+        description: "Умная лампа с управлением через приложение",
+        image: "https://via.placeholder.com/300x200.png?text=Лампа",
+        link: "https://example.com/lamp"
       },
       {
-        "name": "Набор для ухода за кожей",
-        "description": "Натуральные компоненты для ежедневного ухода.",
-        "image": "https://via.placeholder.com/220x140?text=Набор",
-        "link": "https://example.com/skincare"
+        name: "Клавиатура",
+        description: "Механическая клавиатура с подсветкой",
+        image: "https://via.placeholder.com/300x200.png?text=Клавиатура",
+        link: "https://example.com/keyboard"
       }
     ],
     "От 10 000 ₽": [
       {
-        "name": "Умные часы",
-        "description": "Отслеживайте активность и уведомления прямо на запястье.",
-        "image": "https://via.placeholder.com/220x140?text=Часы",
-        "link": "https://example.com/smartwatch"
+        name: "Смартфон",
+        description: "Мощный смартфон последнего поколения",
+        image: "https://via.placeholder.com/300x200.png?text=Смартфон",
+        link: "https://example.com/smartphone"
       },
       {
-        "name": "Планшет для рисования",
-        "description": "Для творчества и цифрового искусства.",
-        "image": "https://via.placeholder.com/220x140?text=Планшет",
-        "link": "https://example.com/tablet"
+        name: "Ноутбук",
+        description: "Легкий ноутбук с большим экраном",
+        image: "https://via.placeholder.com/300x200.png?text=Ноутбук",
+        link: "https://example.com/laptop"
       },
       {
-        "name": "Кофемашина",
-        "description": "Приготовление любимого кофе в один клик.",
-        "image": "https://via.placeholder.com/220x140?text=Кофемашина",
-        "link": "https://example.com/coffeemachine"
+        name: "Игровая приставка",
+        description: "Консоль нового поколения",
+        image: "https://via.placeholder.com/300x200.png?text=Приставка",
+        link: "https://example.com/console"
       }
     ]
   };
 
-  function clearGifts() {
-    document.querySelector('.gifts-container').innerHTML = '';
-  }
-
-  function createGiftCard(gift) {
-    const card = document.createElement('article');
-    card.className = 'gift-card fadeInUp';
-    card.tabIndex = 0;
-
-    const img = document.createElement('img');
-    img.src = gift.image;
-    img.alt = gift.name;
-    img.loading = 'lazy';
-    card.appendChild(img);
-
-    const name = document.createElement('h3');
-    name.textContent = gift.name;
-    card.appendChild(name);
-
-    const desc = document.createElement('p');
-    desc.textContent = gift.description;
-    card.appendChild(desc);
-
-    if (gift.link) {
-      const link = document.createElement('a');
-      link.href = gift.link;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.textContent = 'Подробнее';
-      card.appendChild(link);
-    }
-
-    return card;
-  }
-
-  function displayGifts(gifts) {
-    const container = document.querySelector('.gifts-container');
-    clearGifts();
-
-    gifts.slice(0, 3).forEach(gift => {
-      const card = createGiftCard(gift);
+  function showProducts(category) {
+    const container = document.getElementById('products');
+    container.innerHTML = '';
+    const products = wishlist[category] || [];
+    products.forEach(product => {
+      const card = document.createElement('div');
+      card.className = 'product-card fadeInUp';
+      card.innerHTML = `
+        <a href="${product.link}" target="_blank" rel="noopener noreferrer">
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+        </a>
+      `;
       container.appendChild(card);
     });
   }
 
-  function normalizeCategoryKey(str) {
-    return str.replace(/&nbsp;/g, ' ');
-  }
-
-  function updateAriaSelected(buttons, current) {
-    buttons.forEach(btn => {
-      btn.setAttribute('aria-selected', btn === current ? 'true' : 'false');
-      btn.tabIndex = btn === current ? 0 : -1;
+  document.querySelectorAll('.category-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      showProducts(button.dataset.category);
     });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.category-btn');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        updateAriaSelected(buttons, button);
-        const catKey = normalizeCategoryKey(button.dataset.category);
-        if (wishlist[catKey]) {
-          displayGifts(wishlist[catKey]);
-        } else {
-          clearGifts();
-        }
-      });
-    });
-
-    // Показываем сразу первую категорию
-    if (buttons.length > 0) {
-      buttons[0].click();
-    }
   });
+
+  // Показываем первую категорию по умолчанию
+  document.querySelector('.category-btn').click();
 </script>
 </body>
 </html>
